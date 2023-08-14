@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  --bg-color: #1e202b;
+  --text-color: #bfc1c8;
+  --primary-color: #009ad8;
+}
+body {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  background: var(--bg-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0 0 20px;
+  line-height: normal;
+}
+/* ====================== Start Navbar ====================== */
+nav .site-title {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+nav .logo-type {
+  font-size: 14px;
+  color: white;
+}
+nav .site-description {
+  color: var(--text-color);
+}
+.navbar-nav .nav-item a {
+  padding: 5px 25px !important;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  color: white;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-weight: 400;
+}
+nav .navbar-nav .nav-item a:hover {
+  border-color: var(--primary-color);
+  color: #009ad8;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+nav .nav-item {
+  margin-left: 0.625rem;
+}
+nav ul li {
+  padding-bottom: 0.625rem;
+}
+nav .navbar-toggler {
+  background: none;
+  border: 2px solid transparent;
+  color: white;
+  padding: 15px;
+  border-radius: 40px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  display: none;
+  outline: none;
+  vertical-align: middle;
+  font-size: 15px;
+  cursor: pointer;
+}
+nav .navbar-toggler:hover {
+  border-color: #009ad8;
+  color: #009ad8;
+}
+/* ====================== End Navbar ====================== */
+/* ====================== Start Section ====================== */
+.firstSection .container:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+.firstSection {
+  background-image: url("../img/banner.png");
+  background-size: cover;
+  padding: 70px 0;
+  min-height: 350px;
+}
+.find-location {
+  position: relative;
+  margin-bottom: 70px;
+}
+.find-location input[type="text"] {
+  width: 100%;
+  padding: 20px 50px 20px 20px;
+  background: #1e202b;
+  color: white;
+}
+.find-location input,
+form textarea,
+form select {
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+.find-location input[type="submit"],
+.find-location input[type="button"] {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  padding: 0 40px;
+}
+.button,
+input[type="submit"],
+input[type="button"],
+form button,
+form input[type="reset"] {
+  border: none;
+  background: #009ad8;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+}
+.info img {
+  height: fit-content;
+}
+p {
+  margin: 0;
+}
+/* ====================== End Section ====================== */
+.forecast-container {
+  background: #323544;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: -150px;
+  margin-bottom: 50px;
+  color: white;
+}
+.forecast-container .content span img {
+  margin-right: 3px;
+  vertical-align: middle;
+  width: 25px;
+}
+.forecast-container .info span {
+  margin-right: 10px;
+}
+.item-today {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+.custom {
+  color: #009ad8;
+  margin: 20px 0;
+}
+.bg-color {
+  background-color: #262936;
+}
+/* ====================== Start Footer ====================== */
+footer {
+  background-color: #272936;
+  padding: 50px 0;
+}
+.site-footer .subscribe-form {
+  position: relative;
+  margin-bottom: 30px;
+}
+.site-footer .subscribe-form input[type="submit"] {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+}
+.site-footer .subscribe-form input[type="text"] {
+  padding: 20px 100px 20px 20px;
+  background: #1e202b;
+  width: 100%;
+  color: white;
+}
+form input,
+form textarea,
+form select {
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+}
+.colophon {
+  color: var(--text-color);
+  text-align: center;
+}
+.site-footer .social-links a {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #1e202b;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 2;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 1.4285714286em;
+  margin-left: 0.3125rem;
+}
+.site-footer .social-links a:hover {
+  background: var(--primary-color);
+  color: white;
+}
+footer .social-links {
+  text-align: center;
+}
+/* ====================== End Footer ====================== */

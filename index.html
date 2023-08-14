@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media query.css">
+  <script type="text/javascript">
+    // Notice how this gets configured before we load Font Awesome
+    window.FontAwesomeConfig = { autoReplaceSvg: false }
+  </script>
+
+</head>
+
+<body>
+  <!-- ====================== Start Navbar ====================== -->
+  <nav class="navbar navbar-expand-lg py-4">
+    <div class="container-md">
+      <a class="navbar-brand d-flex" href="/">
+        <img src="img/logo@2x.png" class="me-3" alt="failed" width="64" height="38">
+        <div class="logo-type">
+          <h1 class="site-title">Weather</h1>
+          <small class="site-description">tagline goes here</small>
+        </div>
+      </a>
+      <i class="fa fa-bars navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></i>
+      <div class="pt-3 collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Live cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ====================== End Navbar ====================== -->
+  <!-- ====================== Start Section ====================== -->
+  <section class="firstSection">
+    <div class="container">
+      <div class="find-location">
+        <input type="text" placeholder="Find your location..." id="search">
+        <input type="button" value="Find" id="submit">
+      </div>
+    </div>
+  </section>
+  <!-- ====================== End Section ====================== -->
+  <div class="forecast-table">
+    <div class="container">
+      <div class="forecast-container row" id="forecast">
+        <div class="today forecast col-md-4 p-0">
+          <div class="item-today d-flex justify-content-between" id="today">
+            <h6 class="day m-0">Saturday</h6>
+            <h6 class="date m-0 d-flex"><span class="me-1">12</span>
+              <p>August</p>
+            </h6>
+          </div>
+          <div class="content p-2 text-center" id="current">
+            <p class="location fs-6 m-0">Cairo</p>
+            <div class="degree d-flex align-items-center justify-content-evenly pt-2">
+              <span class="num fs-1 fw-bold">32 <sup>o</sup> C</span>
+              <div class="icon">
+                <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+              </div>
+            </div>
+            <div class="custom">Sunny</div>
+            <div class="info mb-3 d-flex justify-content-center">
+              <span class="d-flex align-items-center">
+                <img src="img/icon-umberella@2x.png" class="me-1" alt="">
+                <p>20%</p>
+              </span>
+              <span class="d-flex align-items-center">
+                <img src="img/icon-wind@2x.png" alt="">
+                <p id="windKm">18km/h</p>
+              </span>
+              <span class="d-flex align-items-center">
+                <img src="img/icon-compass@2x.png" class="me-1" alt="">
+                <p id="windDir">East</p>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="next-day bg-color forecast col-md-4 p-0">
+          <div class="item-today" id="tomorrow">
+            <p class="day m-0">Sunday</p>
+          </div>
+          <div class="content p-2 text-center" id="current">
+            <div class="degree">
+              <div class="weatherImg">
+                <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+              </div>
+              <span class="num maxTemp fs-1 fw-bold">39.8 <sup>o</sup> C</span>
+              <span class="num minTemp fs-6 d-block">24.5 <sup>o</sup></span>
+            </div>
+            <div id="weatherCondition" class="custom">Sunny</div>
+          </div>
+        </div>
+        <div class="next-day forecast col-md-4 p-0">
+          <div class="item-today" id="afrerTomorrow">
+            <p class="day m-0">Monday</p>
+          </div>
+          <div class="content p-2 text-center" id="thirdDay">
+            <div class="degree">
+              <div class="icon">
+                <img id="thirdDayIcon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+              </div>
+              <span class="num fs-1 fw-bold" id="maxTemp">40.5 <sup>o</sup> C</span>
+              <span class="num minTemp fs-6 d-block">25 <sup>o</sup></span>
+            </div>
+            <div class="custom">Sunny</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- ====================== Start Footer ====================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <form action="#" class="subscribe-form">
+            <input type="text" placeholder="Enter your email to subscribe...">
+            <input type="submit" value="Subscribe">
+          </form>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+          <div class="social-links mb-3">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </div>
+  </footer>
+  <!-- ====================== End Footer ====================== -->
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
