@@ -19,6 +19,9 @@ nav .menu li a:hover {
     border-color: var(--primary-color);
     color: #009ad8;
 }
+.icon-btn {
+    margin-left: auto;
+}
 .breadcrumb {
     background: #262936;
     border-radius: 40px;
@@ -32,7 +35,7 @@ nav .menu li a:hover {
     vertical-align: middle;
     width: 12px;
     height: 7px;
-    background: url("/img/arrow-gray.png") no-repeat;
+    background: url("../img/arrow-gray.png") no-repeat;
     margin: 0 10px;
 }
 .breadcrumb a {
